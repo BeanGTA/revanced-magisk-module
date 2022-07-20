@@ -4,7 +4,7 @@ set -euo pipefail
 
 source utils.sh
 
-YT_PATCHER_ARGS="-e microg-support -e swipe-controls"
+YT_PATCHER_ARGS="-e microg-support -e video-ads -e general-ads -e hdr-auto-brightness -e return-youtube-dislike -e hide-cast-button -e premium-heading"
 MUSIC_PATCHER_ARGS="-e microg-support"
 
 BUILD_YT=false
