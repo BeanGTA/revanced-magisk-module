@@ -4,7 +4,7 @@ set -euo pipefail
 
 source utils.sh
 
-YT_PATCHER_ARGS="-e microg-support -e autorepeat-by-default -e amoled -e custom-branding -e swipe-controls"
+YT_PATCHER_ARGS="-e microg-support -e hide-autoplay-button -e amoled -e custom-branding -e swipe-controls"
 MUSIC_PATCHER_ARGS="-e microg-support"
 
 BUILD_YT=false
