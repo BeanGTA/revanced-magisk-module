@@ -54,7 +54,7 @@ log() {
 # yes this is how i download the stock yt apk from apkmirror
 dl_yt() {
 	echo "Downloading YouTube"
-	local url="https://www.apkmirror.com/apk/google-inc/youtube/youtube-17.28.34-release/"
+	local url="https://www.apkmirror.com/apk/google-inc/youtube/youtube-${1//./-}-release/"
 	url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's/href="/@/g; s;.*APK</span>[^@]*@\([^#]*\).*;\1;p')"
 	log "\nYouTube version: $1\ndownloaded from: [APKMirror]($url)"
 	url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's;.*href="\(.*key=[^"]*\)">.*;\1;p')"
