@@ -21,5 +21,18 @@ If you wish to include/exclude some patches to your liking:
 # Building the Magisk Modules
 
 ```bash
-$ ./build.sh all
+sudo apt-get update && sudo apt-get upgrade -y && \
+sudo apt-get -yq install gnupg curl && \
+sudo apt-key adv \
+  --keyserver hkp://keyserver.ubuntu.com:80 \
+  --recv-keys 0xB1998361219BD9C9 && \
+wget https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-3_all.deb && \
+sudo apt-get install ./zulu-repo_1.0.0-3_all.deb && \
+sudo apt-get update && \
+sudo apt-get install zulu17-jdk -y && \
+sudo apt-get install zip -y && \
+sudo apt-get install binutils -y && \
+git clone https://github.com/BeanGTA/revanced-magisk-module.git && \
+cd revanced-magisk-module && \
+./build.sh all
 ```
